@@ -1,0 +1,9 @@
+# macOS Finder metadata
+.DS_Store
+._*
+
+# Local editor and OS files
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
