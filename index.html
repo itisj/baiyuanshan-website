@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-lang="zh">
+<html lang="zh-CN" data-lang="zh" class="intro-locked">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,8 @@
 <meta name="description" content="白猿山（Baiyuanshan）—— 立足国家级影视工业、深入 AI 视觉前沿的商业视觉服务商。商业策划 · 视觉制作 · AIGC · 赋能培训。A commercial visual studio rooted in national-level film production and the frontier of AI-driven content.">
 <meta name="theme-color" content="#ff391e">
 <link rel="canonical" href="https://baiyuanshan.com/">
-<link rel="icon" type="image/png" href="media/logo_corner.png">
+<link rel="icon" type="image/png" href="logo_horizontal.png?v=2">
+<link rel="apple-touch-icon" href="logo_horizontal.png?v=2">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://baiyuanshan.com/">
 <meta property="og:title" content="白猿山 · 商业视觉服务商 | Baiyuanshan — Commercial Visual Studio">
@@ -36,6 +37,7 @@
 }
 html{background:var(--grey);scroll-behavior:smooth}
 body{margin:0;background:var(--grey);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html.intro-locked,html.intro-locked body{height:100%;overflow:hidden;overscroll-behavior:none}
 img{display:block;width:100%;height:100%;object-fit:cover}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
@@ -72,18 +74,18 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
 .header.shown{transform:none}
 .header.on-dark{color:var(--white);background:rgba(13,11,9,.34)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.header{background:rgba(248,248,248,.92)}.header.on-dark{background:rgba(13,11,9,.62)}}
-.header .bar{display:grid;grid-template-columns:1fr;gap:8px;padding:13px var(--pad) 12px;position:relative}
+.header .bar{display:grid;grid-template-columns:1fr;align-items:center;gap:8px;padding:13px var(--pad) 12px;position:relative}
 .header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;opacity:.14}
 .h-logo{display:flex;align-items:center;justify-content:flex-start;min-width:0}
-.h-logo img{display:block;width:auto;height:clamp(24px,2.2vw,34px);max-width:min(100%,330px);object-fit:contain;object-position:left center}
+.h-logo img{display:block;width:auto;height:clamp(38px,3.6vw,56px);max-width:min(100%,500px);object-fit:contain;object-position:left center}
 .header.on-dark .h-logo img{filter:brightness(0) invert(1)}
-.h-status{display:none;font-family:var(--mono);font-size:11px;align-items:center;gap:6px}
-.h-loc{display:none;font-family:var(--mono);font-size:11px;letter-spacing:.04em;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nav{display:none;justify-self:end;align-items:baseline}
-.nav a{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;opacity:.62;transition:opacity .3s var(--ease)}
+.h-status{display:none;font-family:var(--mono);font-size:12px;align-items:center;gap:6px}
+.h-loc{display:none;font-family:var(--mono);font-size:12px;letter-spacing:.035em;opacity:.72;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav{display:none;justify-self:end;align-items:center;white-space:nowrap}
+.nav a{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:clamp(14px,1.2vw,16px);font-weight:600;letter-spacing:.015em;opacity:.76;transition:opacity .3s var(--ease)}
 .nav a.active{opacity:1}
-.nav a:not(:last-child){margin-right:5px}
-.nav a:not(:last-child)::after{content:"/";margin-left:5px;font-weight:300;opacity:.45}
+.nav a:not(:last-child){margin-right:8px}
+.nav a:not(:last-child)::after{content:"/";margin-left:8px;font-weight:300;opacity:.45}
 .nav a .dot{transform:scale(0);transition:transform .45s var(--ease)}
 .nav a.active .dot{transform:scale(1)}
 
@@ -135,7 +137,6 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
 .sr__thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.68),transparent 70%)}
 .sr__thumb .ph{position:absolute;inset:0;background-size:cover;background-position:center}
 .sr__thumb .n{position:absolute;left:6px;bottom:3px;z-index:1;font-family:var(--mono);font-size:9px;color:#fff;text-shadow:0 1px 4px #000}
-.sr__label{position:absolute;top:var(--pad);left:var(--pad);z-index:4;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,248,248,.5)}
 @media(max-width:679px){
   .sr__now{bottom:20svh;max-width:92%}
   .sr__project{font-size:clamp(40px,13vw,72px)}
@@ -318,11 +319,11 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
 @media(min-width:1024px){
   .grid{grid-template-columns:repeat(9,minmax(0,1fr));padding:0 var(--pad);gap:8px}
   .sec{padding:104px 0}
-  .header .bar{grid-template-columns:repeat(9,1fr);align-items:start;padding:15px var(--pad) 13px}
+  .header .bar{grid-template-columns:repeat(9,1fr);align-items:center;padding:15px var(--pad) 13px}
   .h-logo{grid-column:1/span 3}
-  .h-status{display:flex;grid-column:4/span 1;padding-top:2px}
-  .h-loc{grid-column:5/span 2;padding-top:3px}
-  .nav{display:flex;grid-column:7/span 3}
+  .h-status{display:flex;grid-column:4/span 1}
+  .h-loc{grid-column:5/span 1}
+  .nav{display:flex;grid-column:6/span 4}
   .hero__bot{padding:0 var(--pad) 22px}
   .sec-head .lab{grid-column:1/span 9}
   .sec-head .ttl{grid-column:1/span 9}
@@ -346,6 +347,7 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
   .wrow{grid-template-columns:64px 1fr auto;padding:18px 0}
   .wi:hover .wrow{padding-left:14px}
 }
+@media(min-width:1024px) and (max-width:1099px){.h-loc{display:none}}
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
   .hero__fig img{transform:none!important;opacity:1!important}
@@ -389,11 +391,11 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
 @media(prefers-reduced-motion:reduce){.pl-lang{transition:none}}
 
 /* ════════ LANGUAGE TOGGLE（页内顶栏切换） ════════ */
-.langsw{display:inline-flex;align-items:baseline;gap:7px;margin-left:11px}
-.langsw button,.h-lang-m button{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:inherit;opacity:.5;transition:opacity .3s var(--ease)}
+.langsw{display:inline-flex;align-items:baseline;gap:9px;margin-left:15px}
+.langsw button,.h-lang-m button{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.025em;color:inherit;opacity:.58;transition:opacity .3s var(--ease)}
 .langsw button:hover,.h-lang-m button:hover{opacity:.85}
 .langsw button.on,.h-lang-m button.on{opacity:1;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.h-lang-m{position:absolute;top:13px;right:var(--pad);z-index:3;display:inline-flex;gap:9px}
+.h-lang-m{position:absolute;top:18px;right:var(--pad);z-index:3;display:inline-flex;gap:11px}
 @media(min-width:1024px){.h-lang-m{display:none}}
 
 /* ════════ I18N · 中文模式下隐藏纯英文专用元素（预留） ════════ */
@@ -428,10 +430,10 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
     <div class="h-status"><span class="dot red filled" style="color:var(--red)"></span><span id="hfps">24/24 fps</span></div>
     <a class="h-loc" href="#contact">湖南长沙 · Changsha</a>
     <nav class="nav">
-      <a href="#top" class="active"><span class="dot"></span>Showreel</a>
-      <a href="#studio"><span class="dot"></span>Team</a>
-      <a href="#work"><span class="dot"></span>Work</a>
-      <a href="#contact"><span class="dot"></span>Contact</a>
+      <a href="#top" class="active"><span class="dot"></span><span data-en="Showreel">作品</span></a>
+      <a href="#studio"><span class="dot"></span><span data-en="Team">团队</span></a>
+      <a href="#work"><span class="dot"></span><span data-en="Work">项目</span></a>
+      <a href="#contact"><span class="dot"></span><span data-en="Contact">联系</span></a>
       <span class="langsw"><button type="button" data-lang="zh">中</button><button type="button" data-lang="en">EN</button></span>
     </nav>
     <div class="h-lang-m"><button type="button" data-lang="zh">中</button><button type="button" data-lang="en">EN</button></div>
@@ -448,7 +450,6 @@ h1,h2,h3{margin:0;font-weight:600;line-height:.92;letter-spacing:-.025em}
         <video class="sr__video" id="srVideo" muted playsinline preload="metadata"></video>
       </div>
       <div class="sr__scrim"></div>
-      <div class="sr__label" data-en="Showreel · Selected Work">Show Reel · 作品精选</div>
       <div class="sr__now" aria-live="polite">
         <div class="sr__cat"><span id="srCat">冬奥会开幕式短片</span><span class="live">Show Reel</span></div>
         <h2 class="sr__project" id="srTitle">二十四节气 倒计时</h2>
@@ -797,22 +798,25 @@ const WORKS=[
   const pl=document.getElementById('preloader'),num=document.getElementById('plnum'),count=document.getElementById('plcount'),bar=document.getElementById('plbar'),logo=document.getElementById('pllogo');
   const header=document.getElementById('header'),hero=document.getElementById('hero');
   const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  const DUR=1700,START=performance.now();
+  const DUR=3400,END_HOLD=420,START=performance.now();
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  window.scrollTo(0,0);
   function frame(t){
     const p=Math.min((t-START)/DUR,1);
-    const e=1-Math.pow(1-p,3);
-    num.textContent=Math.round(e*24);
-    bar.style.width=(e*100)+'%';
+    // 完整 ease-in-out：起点悬停感 → 中段加速 → 接近 24 FPS 时自然减速。
+    const motion=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+    num.textContent=Math.round(motion*24);
+    bar.style.width=(motion*100)+'%';
     if(!reduce){
-      const scale=6-e*5;
-      const glow=(1-e)*18;
+      const scale=6-motion*5;
+      const glow=(1-motion)*18;
       count.style.transform='scale('+scale.toFixed(3)+')';
-      count.style.filter='drop-shadow(0 0 '+glow.toFixed(1)+'px rgba(255,255,255,.6)) blur('+((1-e)*1.5).toFixed(2)+'px)';
+      count.style.filter='drop-shadow(0 0 '+glow.toFixed(1)+'px rgba(255,255,255,.6)) blur('+((1-motion)*1.5).toFixed(2)+'px)';
       // 中央公司 logo：与 24 帧同款的缩放+辉光+模糊揭幕
       if(logo){
-        logo.style.transform='translate(-50%,-50%) scale('+(1.45-e*0.45).toFixed(3)+')';
-        logo.style.filter='drop-shadow(0 0 '+((1-e)*26).toFixed(1)+'px rgba(255,255,255,.5)) blur('+((1-e)*7).toFixed(2)+'px)';
-        logo.style.opacity=Math.min(1,e*1.7).toFixed(3);
+        logo.style.transform='translate(-50%,-50%) scale('+(1.45-motion*0.45).toFixed(3)+')';
+        logo.style.filter='drop-shadow(0 0 '+((1-motion)*26).toFixed(1)+'px rgba(255,255,255,.5)) blur('+((1-motion)*7).toFixed(2)+'px)';
+        logo.style.opacity=Math.min(1,p*2.2).toFixed(3);
       }
     }
     if(p<1){requestAnimationFrame(frame);}
@@ -836,12 +840,15 @@ const WORKS=[
           plLang.querySelectorAll('button[data-lang]').forEach(b=>{
             b.addEventListener('click',()=>{
               if(window.applyLang)window.applyLang(b.getAttribute('data-lang'));
+              window.scrollTo(0,0);
+              document.documentElement.classList.remove('intro-locked');
+              requestAnimationFrame(()=>window.scrollTo(0,0));
               plLang.classList.remove('show');
               reveal();
             },{once:true});
           });
         }else{ reveal(); }
-      },300);
+      },END_HOLD);
     }
   }
   requestAnimationFrame(frame);
